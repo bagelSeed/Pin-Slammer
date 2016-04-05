@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CompletePlayerController : MonoBehaviour {
 
 	public float speed;				//Floating point variable to store the player's movement speed.
+    public float friction;				//Floating point variable to store the player's movement speed.
 	public Text countText;			//Store a reference to the UI Text component which will display the number of pickups collected.
 	public Text winText;			//Store a reference to the UI Text component which will display the 'You win' message.
 
@@ -45,16 +46,18 @@ public class CompletePlayerController : MonoBehaviour {
 	void FixedUpdate()
 	{
 		//Store the current horizontal input in the float moveHorizontal.
-		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveHorizontal = rb2d.velocity.x;
 
 		//Store the current vertical input in the float moveVertical.
-		float moveVertical = Input.GetAxis ("Vertical");
+        float moveVertical = rb2d.velocity.y;
 
 		//Use the two store floats to create a new Vector2 variable movement.
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
+        Debug.Log("Movement Value: " + movement);
+
 		//Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-		rb2d.AddForce (movement * speed);
+        rb2d.velocity = movement * (1 - friction / 100);
 	}
 
 	//OnTriggerEnter2D is called whenever this object overlaps with a trigger collider.
