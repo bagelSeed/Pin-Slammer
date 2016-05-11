@@ -17,8 +17,6 @@ public class CompletePlayerController : MonoBehaviour {
 	private int count;				//Integer to store the number of pickups collected so far.
 
     LineRenderer lineRenderer;
-    public float startWidth = 1.0f;
-    public float endWidth = 5.0f;
     public float threshold = 0.001f;
     int lineCount = 0;
 
@@ -32,7 +30,6 @@ public class CompletePlayerController : MonoBehaviour {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.sortingLayerName = "Player";
         lineRenderer.sortingOrder = 1;
-        lineRenderer.SetWidth(startWidth, endWidth);
     }
 
     // Use this for initialization
@@ -51,20 +48,24 @@ public class CompletePlayerController : MonoBehaviour {
 
     void OnMouseDrag()
     {
-        
         lineRenderer.SetVertexCount(2);
 
-        Vector3 direction = transform.position - camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = transform.position - camera.ScreenToWorldPoint(Input.mousePosition);
+        //Vector3 static_Direction = new Vector3(transform.position.x + 10, transform.position.y + 10, transform.position.z);
+
         Debug.Log("Direction Mag: " + direction.magnitude);
+        if (direction.magnitude > 10)
+        { 
+            direction = direction.normalized * 10;
+            Debug.Log("Direction1: " + direction);
+        }
 
         lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, transform.position + direction);
+        lineRenderer.SetPosition(1, new Vector2(transform.position.x + direction.x, transform.position.y + direction.y));
     }
 
     void OnMouseUp()
     {
-        Vector3 objectInWorld = camera.WorldToScreenPoint(transform.position);
-
         // World pos - world pos
         Vector3 movement = (transform.position - camera.ScreenToWorldPoint(Input.mousePosition)) * speed * 100;
         rb2d.AddForce(movement);
