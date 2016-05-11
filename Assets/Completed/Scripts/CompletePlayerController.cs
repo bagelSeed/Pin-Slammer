@@ -20,9 +20,9 @@ public class CompletePlayerController : MonoBehaviour {
     public float threshold = 0.001f;
     int lineCount = 0;
 
-    Vector3 lastPos = Vector3.one * float.MaxValue;
-
     public Camera camera;
+
+    Vector2 direction;
 
     void Awake()
     {
@@ -50,14 +50,12 @@ public class CompletePlayerController : MonoBehaviour {
     {
         lineRenderer.SetVertexCount(2);
 
-        Vector2 direction = transform.position - camera.ScreenToWorldPoint(Input.mousePosition);
+        direction = transform.position - camera.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 static_Direction = new Vector3(transform.position.x + 10, transform.position.y + 10, transform.position.z);
 
-        Debug.Log("Direction Mag: " + direction.magnitude);
-        if (direction.magnitude > 10)
+        if (direction.magnitude > 7)
         { 
-            direction = direction.normalized * 10;
-            Debug.Log("Direction1: " + direction);
+            direction = direction.normalized * 7;
         }
 
         lineRenderer.SetPosition(0, transform.position);
@@ -67,10 +65,8 @@ public class CompletePlayerController : MonoBehaviour {
     void OnMouseUp()
     {
         // World pos - world pos
-        Vector3 movement = (transform.position - camera.ScreenToWorldPoint(Input.mousePosition)) * speed * 100;
+        Vector2 movement = direction * speed * 100;
         rb2d.AddForce(movement);
-
-        Debug.Log("Movement Mag: " + movement.magnitude);
         lineRenderer.SetVertexCount(0);
     }
 
