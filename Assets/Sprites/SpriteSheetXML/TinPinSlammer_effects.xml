@@ -1,0 +1,56 @@
+<TextureAtlas image="MarbleSlashObjects.png">
+  <!-- <SubTexture name="" x="80" y="8" width="26" height="27" />
+  <SubTexture name="" x="10" y="9" width="26" height="27" />
+  <SubTexture name="" x="42" y="9" width="31" height="26" />
+  <SubTexture name="" x="113" y="9" width="28" height="26" />
+  <SubTexture name="" x="399" y="16" width="38" height="27" />
+  <SubTexture name="" x="442" y="16" width="37" height="26" /> -->
+  <SubTexture name="arrow_max" x="189" y="17" width="15" height="32" />
+  <!-- <SubTexture name="" x="259" y="17" width="38" height="27" />
+  <SubTexture name="" x="353" y="18" width="37" height="26" /> -->
+  <SubTexture name="arrow" x="152" y="21" width="13" height="25" />
+  <!-- <SubTexture name="" x="308" y="17" width="37" height="28" />
+  <SubTexture name="" x="81" y="45" width="26" height="27" />
+  <SubTexture name="" x="10" y="46" width="26" height="27" />
+  <SubTexture name="" x="42" y="46" width="31" height="26" />
+  <SubTexture name="" x="113" y="46" width="28" height="26" />
+  <SubTexture name="" x="207" y="105" width="28" height="32" />
+  <SubTexture name="" x="137" y="107" width="64" height="64" />
+  <SubTexture name="" x="311" y="107" width="16" height="31" />
+  <SubTexture name="" x="67" y="110" width="59" height="60" />
+  <SubTexture name="" x="246" y="112" width="29" height="28" />
+  <SubTexture name="" x="337" y="114" width="20" height="25" />
+  <SubTexture name="" x="5" y="117" width="51" height="49" />
+  <SubTexture name="" x="285" y="117" width="20" height="17" />
+  <SubTexture name="" x="438" y="142" width="32" height="32" />
+  <SubTexture name="" x="227" y="144" width="16" height="24" />
+  <SubTexture name="" x="248" y="151" width="12" height="13" />
+  <SubTexture name="" x="264" y="151" width="16" height="16" />
+  <SubTexture name="" x="287" y="151" width="16" height="16" />
+  <SubTexture name="" x="312" y="151" width="14" height="16" />
+  <SubTexture name="" x="335" y="153" width="15" height="13" />
+  <SubTexture name="" x="77" y="182" width="44" height="64" />
+  <SubTexture name="" x="129" y="184" width="64" height="64" />
+  <SubTexture name="" x="285" y="207" width="32" height="33" />
+  <SubTexture name="" x="206" y="208" width="32" height="32" />
+  <SubTexture name="" x="245" y="208" width="32" height="32" />
+  <SubTexture name="" x="334" y="213" width="18" height="25" />
+  <SubTexture name="" x="498" y="213" width="30" height="29" />
+  <SubTexture name="" x="8" y="215" width="60" height="31" />
+  <SubTexture name="" x="383" y="220" width="15" height="14" />
+  <SubTexture name="" x="407" y="220" width="14" height="15" />
+  <SubTexture name="" x="359" y="222" width="16" height="12" />
+  <SubTexture name="" x="428" y="222" width="13" height="13" />
+  <SubTexture name="" x="447" y="226" width="16" height="6" />
+  <SubTexture name="" x="473" y="228" width="16" height="6" />
+  <SubTexture name="" x="400" y="249" width="53" height="64" />
+  <SubTexture name="" x="208" y="252" width="64" height="59" />
+  <SubTexture name="" x="56" y="268" width="30" height="31" />
+  <SubTexture name="" x="17" y="269" width="32" height="30" />
+  <SubTexture name="" x="342" y="269" width="51" height="45" />
+  <SubTexture name="" x="92" y="272" width="25" height="25" />
+  <SubTexture name="" x="122" y="275" width="19" height="19" />
+  <SubTexture name="" x="146" y="277" width="16" height="16" />
+  <SubTexture name="" x="165" y="278" width="15" height="14" />
+  <SubTexture name="" x="298" y="280" width="4" height="16" /> -->
+</TextureAtlas>

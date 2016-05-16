@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 6278ed4218ab4534c83dac2fc328d490
+timeCreated: 1463260479
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SlamOn
+    21300002: YouWin
+    21300004: YouLose
+    21300006: TimesUp
+    21300008: title
+    21300010: final
+    21300012: pin
+    21300014: slam
+    21300016: on
+    21300018: lose
+    21300020: you_l
+    21300022: win
+    21300024: you_w
+    21300026: times_up
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: title
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 302
+        width: 218
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84, y: 68.5}
+        - {x: 79, y: 64.5}
+        - {x: 80, y: 61.5}
+        - {x: 83, y: 61.5}
+        - {x: 82, y: 60.5}
+        - {x: 77, y: 63.5}
+        - {x: 79, y: 68.5}
+        - {x: -109, y: 68.5}
+        - {x: -109, y: -68.5}
+        - {x: -52, y: -68.5}
+        - {x: 109, y: -46.5}
+        - {x: 109, y: 40.5}
+        - {x: 97, y: 61.5}
+        - {x: 88, y: 68.5}
+    - name: final
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 390
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: 24}
+        - {x: -46.5, y: -21}
+        - {x: -43.5, y: -24}
+        - {x: 46.5, y: -24}
+        - {x: 46.5, y: 24}
+    - name: pin
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 390
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 23.5}
+        - {x: -32, y: 20.5}
+        - {x: -32, y: -19.5}
+        - {x: -26, y: -23.5}
+        - {x: 32, y: -23.5}
+        - {x: 32, y: 23.5}
+    - name: slam
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 283
+        width: 132
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 37.5}
+        - {x: -58, y: 37.5}
+        - {x: -66, y: 30.5}
+        - {x: -66, y: -28.5}
+        - {x: -57, y: -37.5}
+        - {x: 56, y: -37.5}
+        - {x: 63, y: -25.5}
+        - {x: 66, y: 2.5}
+        - {x: 66, y: 36.5}
+    - name: on
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 217
+        width: 99
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 31.5}
+        - {x: -49.5, y: 25.5}
+        - {x: -49.5, y: -31.5}
+        - {x: 26.5, y: -31.5}
+        - {x: 49.5, y: 13.5}
+        - {x: 49.5, y: 31.5}
+    - name: lose
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 181
+        width: 123
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54.5, y: 33.5}
+        - {x: -56.5, y: 27.5}
+        - {x: -61.5, y: -8.5}
+        - {x: -61.5, y: -33.5}
+        - {x: 61.5, y: -33.5}
+        - {x: 61.5, y: 33.5}
+    - name: you_l
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 181
+        width: 107
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.5, y: 32.5}
+        - {x: -53.5, y: 0.5}
+        - {x: -38.5, y: -32.5}
+        - {x: 45.5, y: -32.5}
+        - {x: 53.5, y: -23.5}
+        - {x: 53.5, y: 32.5}
+    - name: win
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 128
+        width: 103
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 36}
+        - {x: -51.5, y: -21}
+        - {x: -44.5, y: -36}
+        - {x: 46.5, y: -36}
+        - {x: 51.5, y: -35}
+        - {x: 51.5, y: 35}
+        - {x: 48.5, y: 36}
+    - name: you_w
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 128
+        width: 107
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.5, y: 32.5}
+        - {x: -53.5, y: -32.5}
+        - {x: 53.5, y: -32.5}
+        - {x: 53.5, y: 32.5}
+    - name: times_up
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 45
+        width: 239
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -119.5, y: 38}
+        - {x: -119.5, y: -38}
+        - {x: 104.5, y: -38}
+        - {x: 119.5, y: -6}
+        - {x: 119.5, y: 38}
+    - name: SlamOn
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 217
+        width: 133
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: -5.5}
+        - {x: -56.5, y: -12.5}
+        - {x: -56.5, y: -67.5}
+        - {x: -49.5, y: -70.5}
+        - {x: 20.5, y: -70.5}
+        - {x: 46.5, y: -28.5}
+        - {x: 46.5, y: -5.5}
+      - - {x: -60.5, y: 70.5}
+        - {x: -66.5, y: 63.5}
+        - {x: -66.5, y: 5.5}
+        - {x: -58.5, y: -6.5}
+        - {x: 62.5, y: -6.5}
+        - {x: 66.5, y: -2.5}
+        - {x: 66.5, y: 70.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

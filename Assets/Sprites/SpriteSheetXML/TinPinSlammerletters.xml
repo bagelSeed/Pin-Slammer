@@ -1,0 +1,12 @@
+<TextureAtlas image="TinPinSlammerletters.png">
+  <SubTexture name='title' x="20" y="19" width="218" height= "137" />
+  <SubTexture name='final' x="280" y="20" width="93" height="48" />
+  <SubTexture name='pin' x="381" y="21" width="64" height="47" />
+  <SubTexture name='slam' x="294" y="100" width="132" height="75" />
+  <SubTexture name='on' x="306" y="178" width="99" height="63" />
+  <SubTexture name='lose' x="125" y="210" width="123" height="67" />
+  <SubTexture name='you_l' x="14" y="212" width="107" height="65" />
+  <SubTexture name='win' x="411" y="258" width="103" height="72" />
+  <SubTexture name='you_w' x="286" y="265" width="107" height="65" />
+  <SubTexture name='times_up' x="12" y="337" width="239" height="76" />
+</TextureAtlas>
