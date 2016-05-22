@@ -15,15 +15,6 @@ public class TinPinObjectController : MonoBehaviour {
     public float shrinkScale;
     public float shrinkSpeed;
 
-    [HideInInspector]public Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
+    public float friction;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

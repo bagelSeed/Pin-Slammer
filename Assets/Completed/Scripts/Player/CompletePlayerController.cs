@@ -8,17 +8,13 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LineRenderer))]
 public class CompletePlayerController : TinPinObjectController {
 
-    public AIController AI;
-
-	public float speed;				
-    public float friction;
+    public float speed;
     public float percentage;
 
     public int lives;               //Integer to store the number of lives
-    public Text livesText;          //Store a reference to the UI Text component which will display the number of pickups collected.
-    public Text winText;			//Store a reference to the UI Text component which will display the 'You win' message.
 
     [HideInInspector]public STATUS currStatus;
+    private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     LineRenderer lineRenderer;
     SpriteRenderer forceArrow;
@@ -43,15 +39,8 @@ public class CompletePlayerController : TinPinObjectController {
         forceArrow.sortingOrder = 1;
 
         rb2d = GetComponent<Rigidbody2D> ();
-		winText.text = "";
 
-		SetCountText ();
         spawnPlayer();
-
-        AI = GetComponent<AIController>();
-        if (AI == null)
-            AI = gameObject.AddComponent<AIController>();
-        AI.createAI(this);
     }
 
     void OnMouseDrag()
@@ -111,7 +100,6 @@ public class CompletePlayerController : TinPinObjectController {
             {
                 lives--;
                 playerDisabled = lives == 0;
-                SetCountText();
                 if (playerDisabled)
                 {
                     transform.localScale = Vector3.zero;
@@ -131,14 +119,6 @@ public class CompletePlayerController : TinPinObjectController {
         {
             playerDisabled = true;
         }
-	}
-
-	//This function updates the text displaying the number of objects we've collected and displays our victory message if we've collected all of them.
-	void SetCountText()
-	{
-		livesText.text = "Player's Lives: " + lives.ToString ();
-		if (lives == 0)
-			winText.text = "Loser!";
 	}
 
     void spawnPlayer()
