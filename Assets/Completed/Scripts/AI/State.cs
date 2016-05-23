@@ -65,10 +65,7 @@ public class Patrol : State
         // Check if we have the reflex (The time passed from previous state)
         // Switch state, or continue with this state
 
-        if (!AI.busy)
-        {
-            AI.AttackPlayer();
-        }
+        AI.AttackPlayer();
     }
 
     public void OnTriggerEnter(Collider other) { }
