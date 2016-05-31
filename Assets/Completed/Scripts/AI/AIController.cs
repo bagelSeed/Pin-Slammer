@@ -9,7 +9,7 @@ public class AIController : TinPinObjectController {
     [HideInInspector]public bool busy;
     private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
-    bool AIDisabled = false;
+    bool playerDisabled = false;
     public float speed;
     public float percentage;
     
@@ -63,13 +63,45 @@ public class AIController : TinPinObjectController {
         float moveVertical = rb2d.velocity.y;
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        float friction_ = AIDisabled ? 1 : (1 - friction / 10);
+        float friction_ = playerDisabled ? 1 : (1 - friction / 10);
         rb2d.velocity = movement * friction_;
+
+        if (playerDisabled)
+        {
+            if (transform.localScale.x < shrinkScale &&
+                transform.localScale.y < shrinkScale &&
+                transform.localScale.z < shrinkScale)
+            {
+                playerDisabled = false;
+                if (playerDisabled)
+                {
+                    transform.localScale = Vector3.zero;
+                    return;
+                }
+                spawnPlayer();
+            }
+            transform.localScale -= Vector3.one * Time.deltaTime * shrinkSpeed;
+        }
     }
 
-    private void OnTriggerEnter(Collider player)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("AI Collided With Player!");
+        //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
+        if (other.gameObject.CompareTag("Background"))
+        {
+            playerDisabled = true;
+        }
+    }
+
+    void spawnPlayer()
+    {
+        // Eventually get some kind of init position getting for each map
+        Vector2 initialPosition = new Vector2(0, 7f);
+        Vector2 initialVelocity = new Vector2(0, 0);
+
+        transform.position = initialPosition;
+        transform.localScale = Vector3.one * initialScale;
+        rb2d.velocity = initialVelocity;
     }
 
     // Public function
