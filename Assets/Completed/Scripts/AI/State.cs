@@ -9,7 +9,7 @@ public interface State {
 
     // Current States:
     void ToPatrolState();
-    void ToAlertState();
+    void ToAttackState();
     void ToChaseState();
 }
 
@@ -27,7 +27,7 @@ public class Attack : State
 
     public void ToPatrolState() { }
 
-    public void ToAlertState() { }
+    public void ToAttackState() { }
 
     public void ToChaseState() { }
 }
@@ -46,7 +46,7 @@ public class Escape : State
 
     public void ToPatrolState() { }
 
-    public void ToAlertState() { }
+    public void ToAttackState() { }
 
     public void ToChaseState() { }
 }
@@ -66,13 +66,15 @@ public class Patrol : State
         // Switch state, or continue with this state
 
         AI.AttackPlayer();
+        ToAttackState();
     }
 
     public void OnTriggerEnter(Collider other) { }
 
     public void ToPatrolState() { }
 
-    public void ToAlertState() { }
+    public void ToAttackState() {
+    }
 
     public void ToChaseState() { }
 }

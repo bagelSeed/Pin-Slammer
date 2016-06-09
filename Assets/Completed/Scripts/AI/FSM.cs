@@ -29,7 +29,6 @@ public class FSM {
     // Update is called once per frame
     public void Update()
     {
-
         if (currState != null)
             currState.UpdateState();
     }

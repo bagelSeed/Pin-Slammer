@@ -9,10 +9,6 @@ public class AIController : TinPinObjectController {
     [HideInInspector]public bool busy;
     private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
-    bool playerDisabled = false;
-    public float speed;
-    public float percentage;
-    
     private float bufferTime=0f;
     private STATUS AI_STATUS;
 
@@ -21,6 +17,7 @@ public class AIController : TinPinObjectController {
         fsm = new FSM( this );
         level = 1;
         busy = false;
+        lives = 3;
 
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -72,6 +69,7 @@ public class AIController : TinPinObjectController {
                 transform.localScale.y < shrinkScale &&
                 transform.localScale.z < shrinkScale)
             {
+                // Give AI Lives
                 playerDisabled = false;
                 if (playerDisabled)
                 {

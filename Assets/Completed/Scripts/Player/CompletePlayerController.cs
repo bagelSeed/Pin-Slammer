@@ -8,11 +8,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LineRenderer))]
 public class CompletePlayerController : TinPinObjectController {
 
-    public float speed;
-    public float percentage;
-
-    public int lives;               //Integer to store the number of lives
-
     [HideInInspector]public STATUS currStatus;
     private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -22,8 +17,6 @@ public class CompletePlayerController : TinPinObjectController {
     public Camera camera_;
 
     Vector2 direction;
-
-    bool playerDisabled = false;
 
     // Use this for initialization
     void Start()

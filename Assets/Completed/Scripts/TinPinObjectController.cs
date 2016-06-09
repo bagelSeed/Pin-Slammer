@@ -16,5 +16,9 @@ public class TinPinObjectController : MonoBehaviour {
     public float shrinkSpeed;
 
     public float friction;
+    public int lives;
+    public bool playerDisabled = false;
 
+    public float speed;
+    public float percentage;
 }
