@@ -8,9 +8,7 @@ public interface State {
     void OnTriggerEnter(Collider other);
 
     // Current States:
-    void ToPatrolState();
-    void ToAttackState();
-    void ToChaseState();
+    float getBufferTime();
 }
 
 public class Attack : State
@@ -21,15 +19,11 @@ public class Attack : State
         AI = AI_;
     }
 
+    public float getBufferTime() { return 1.5f; }
+
     public void UpdateState() { }
 
     public void OnTriggerEnter(Collider other) { }
-
-    public void ToPatrolState() { }
-
-    public void ToAttackState() { }
-
-    public void ToChaseState() { }
 }
 
 public class Escape : State
@@ -40,15 +34,11 @@ public class Escape : State
         AI = AI_;
     }
 
+    public float getBufferTime() { return 2.0f; }
+
     public void UpdateState() { }
 
     public void OnTriggerEnter(Collider other) { }
-
-    public void ToPatrolState() { }
-
-    public void ToAttackState() { }
-
-    public void ToChaseState() { }
 }
 
 public class Patrol : State
@@ -59,6 +49,8 @@ public class Patrol : State
         AI = AI_;
     }
 
+    public float getBufferTime() { return 2.0f; }
+
     public void UpdateState()
     {
         // Want to check if we should attack user
@@ -66,15 +58,8 @@ public class Patrol : State
         // Switch state, or continue with this state
 
         AI.AttackPlayer();
-        ToAttackState();
+        AI.fsm.ToAttackState();
     }
 
     public void OnTriggerEnter(Collider other) { }
-
-    public void ToPatrolState() { }
-
-    public void ToAttackState() {
-    }
-
-    public void ToChaseState() { }
 }

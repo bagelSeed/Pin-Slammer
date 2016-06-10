@@ -32,5 +32,23 @@ public class FSM {
         if (currState != null)
             currState.UpdateState();
     }
+
+    public float getBufferTime()
+    {
+        return currState.getBufferTime();
+    }
+
+    public void ToPatrolState()
+    {
+        currState = patrolState;
+    }
+    public void ToAttackState()
+    {
+        currState = attackState;
+    }
+    public void ToEscapeState()
+    {
+        currState = escapeState;
+    }
 }
 

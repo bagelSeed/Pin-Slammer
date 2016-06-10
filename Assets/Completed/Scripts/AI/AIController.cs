@@ -10,7 +10,6 @@ public class AIController : TinPinObjectController {
     private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     private float bufferTime=0f;
-    private STATUS AI_STATUS;
 
     // Use this for initialization
     void Start () {
@@ -45,7 +44,7 @@ public class AIController : TinPinObjectController {
         bufferTime += Time.deltaTime;
         if (player == null)
             player = GetComponent<CompletePlayerController>();
-        if (player != null && !checkBusy())
+        if (player != null && fsm.getBufferTime() > bufferTime)
         {
             Debug.Log("Buffer: " + bufferTime);
             bufferTime = 0;
@@ -69,8 +68,9 @@ public class AIController : TinPinObjectController {
                 transform.localScale.y < shrinkScale &&
                 transform.localScale.z < shrinkScale)
             {
-                // Give AI Lives
-                playerDisabled = false;
+                // Take AI Lives
+                --lives;
+                playerDisabled = lives == 0;
                 if (playerDisabled)
                 {
                     transform.localScale = Vector3.zero;
@@ -112,28 +112,5 @@ public class AIController : TinPinObjectController {
         }
         Vector2 movement = direction * speed * percentage;
         rb2d.AddForce(movement);
-
-        AI_STATUS = STATUS.ATTACKING;
-    }
-
-    public bool checkBusy()
-    {
-        float curStatusBufferTime = 0;
-        switch (AI_STATUS)
-        {
-            case STATUS.ATTACKING:
-                curStatusBufferTime = 1.5f;
-                break;
-            case STATUS.HAULTED:
-                curStatusBufferTime = 2;
-                break;
-            case STATUS.ESCAPING:
-                curStatusBufferTime = 2;
-                break;
-            case STATUS.PATROLLING:
-                curStatusBufferTime = 2;
-                break;
-        }
-        return curStatusBufferTime > bufferTime;
     }
 }

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LineRenderer))]
 public class CompletePlayerController : TinPinObjectController {
 
-    [HideInInspector]public STATUS currStatus;
     private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     LineRenderer lineRenderer;
@@ -72,18 +71,6 @@ public class CompletePlayerController : TinPinObjectController {
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         float friction_ = playerDisabled ? 1 : (1 - friction / 10);
         rb2d.velocity = movement * friction_;
-
-        // Set Status
-        Vector3 mag = rb2d.velocity;
-        if (mag.magnitude < 5)
-            currStatus = STATUS.HAULTED;
-        else if (mag.magnitude < 15)
-            currStatus = STATUS.PATROLLING;
-        else
-        {
-            // a different way of determining if player is attack if AI level > 2
-            currStatus = STATUS.ATTACKING;
-        }
 
         if (playerDisabled && lives > 0)
         {
